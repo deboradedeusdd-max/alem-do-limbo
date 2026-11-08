@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Farol · Um áudio só seu, com Débora De Deus</title>
+<meta name="description" content="Você me conta em áudio o que está vivendo, faz até 3 perguntas e recebe em até 48 horas úteis um áudio meu, feito só para a sua situação. R$ 97.">
+<meta property="og:title" content="Farol · Um áudio só seu para enxergar o seu Limbo">
+<meta property="og:description" content="Você me conta. Eu te respondo em áudio, só para você. R$ 97.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --creme:#f8f2ea; --creme2:#efe4d6; --papel:#fffaf4;
+    --preto:#1d1517; --texto:#3b3033; --suave:#76686b;
+    --vermelho:#a3201f; --vermelho-esc:#7e1817; --ouro:#c19a5b; --ouro-claro:#e2c894;
+    --borda:#e4d6c4;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--creme);color:var(--texto);font-family:'Montserrat',system-ui,sans-serif;
+    font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;padding-bottom:84px}
+  img,svg{display:block;max-width:100%}
+  .wrap{max-width:720px;margin:0 auto;padding:0 22px}
+  section{padding:64px 0}
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;color:var(--preto);line-height:1.15;font-weight:600}
+  h2{font-size:clamp(28px,6.6vw,40px);margin-bottom:22px}
+  h3{font-size:21px;margin-bottom:6px}
+  p+p{margin-top:14px}
+  .kicker{font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--vermelho);margin-bottom:14px}
+  .center{text-align:center}
+  strong{color:var(--preto)}
+
+  .fissura{width:100%;height:26px;margin:0 auto}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--vermelho);color:#fff;
+    text-decoration:none;font-weight:700;font-size:16px;letter-spacing:.02em;padding:18px 28px;border-radius:999px;
+    box-shadow:0 10px 24px -10px rgba(163,32,31,.6);transition:transform .15s ease, background .15s ease;text-align:center}
+  .btn:hover{background:var(--vermelho-esc);transform:translateY(-1px)}
+  .btn svg{width:22px;height:22px;flex:none}
+  .btn-wrap{margin-top:30px}
+  .btn-nota{display:block;margin-top:12px;font-size:13px;color:var(--suave)}
+
+  /* HERO */
+  .hero{background:var(--preto);color:var(--creme);padding:56px 0 70px;position:relative;overflow:hidden}
+  .hero:before{content:"";position:absolute;inset:-40% -30% auto auto;width:520px;height:520px;border-radius:50%;
+    background:radial-gradient(circle, rgba(193,154,91,.35), transparent 65%)}
+  .hero .wrap{position:relative}
+  .marca{display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.3em;font-weight:600;color:var(--ouro-claro);text-transform:uppercase}
+  .marca span{display:inline-block;width:28px;height:1px;background:var(--ouro)}
+  .hero h1{color:#fff;font-size:clamp(32px,8.2vw,52px);margin:28px 0 22px}
+  .hero h1 em{font-style:italic;color:var(--ouro-claro);font-weight:600}
+  .hero .sub{font-size:18px;color:#e9ddd0;max-width:600px}
+  .hero .sub strong{color:#fff}
+  .hero .btn-nota{color:#b9a99c}
+  .onda{display:flex;align-items:center;gap:4px;height:38px;margin-top:34px}
+  .onda i{display:block;width:4px;border-radius:4px;background:var(--ouro);opacity:.85}
+
+  /* ESPELHO */
+  .lista-dor{list-style:none;margin-top:8px}
+  .lista-dor li{position:relative;padding:16px 0 16px 38px;border-bottom:1px solid var(--borda);font-size:17.5px}
+  .lista-dor li:last-child{border-bottom:0}
+  .lista-dor li:before{content:"";position:absolute;left:4px;top:24px;width:14px;height:14px;border-radius:50%;border:2px solid var(--vermelho)}
+  .fecho{margin-top:26px;font-family:'Playfair Display',serif;font-size:24px;line-height:1.25;color:var(--vermelho);font-weight:600;font-style:italic}
+
+  /* O QUE É */
+  .escuro{background:var(--preto);color:#e9ddd0}
+  .escuro h2{color:#fff}
+  .escuro h2 em{color:var(--ouro-claro);font-style:italic}
+  .escuro strong{color:#fff}
+  .escuro .kicker{color:var(--ouro-claro)}
+
+  /* PASSOS */
+  .passos{list-style:none;counter-reset:p;margin-top:24px;display:grid;gap:12px}
+  .passos li{counter-increment:p;position:relative;background:var(--papel);border:1px solid var(--borda);border-radius:16px;padding:18px 18px 18px 70px}
+  .passos li:before{content:counter(p);position:absolute;left:18px;top:16px;width:36px;height:36px;border-radius:50%;
+    background:var(--vermelho);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center}
+  .passos b{color:var(--preto)}
+  .passos span{display:block;font-size:15px;color:var(--suave);margin-top:4px}
+
+  /* PARTES DO ÁUDIO */
+  .partes{display:grid;grid-template-columns:1fr;gap:12px;margin-top:24px}
+  .parte{display:flex;gap:14px;align-items:flex-start;background:var(--papel);border:1px solid var(--borda);border-radius:16px;padding:16px 18px}
+  .parte i{flex:none;width:10px;height:10px;margin-top:9px;border-radius:2px;background:var(--ouro);transform:rotate(45deg)}
+  .parte b{color:var(--preto)}
+  .parte span{display:block;font-size:15px;color:var(--suave);line-height:1.5}
+
+  /* NÃO É */
+  .nao-e{background:var(--vermelho);color:#fff;text-align:center}
+  .nao-e .kicker{color:var(--ouro-claro)}
+  .nao-e p.linha{font-family:'Playfair Display',serif;font-size:clamp(22px,5.4vw,29px);line-height:1.3;font-weight:600}
+  .nao-e .assinatura{margin-top:30px;font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(25px,6vw,34px);font-weight:600}
+  .nao-e .assinatura em{color:var(--ouro-claro)}
+
+  /* SOBRE */
+  .sobre{background:var(--papel);border-top:1px solid var(--borda);border-bottom:1px solid var(--borda)}
+  .sobre .citacao{font-family:'Playfair Display',serif;font-size:clamp(24px,5.8vw,32px);line-height:1.25;color:var(--preto);font-weight:600;margin-bottom:22px}
+  .sobre .citacao em{color:var(--vermelho)}
+  .assina{margin-top:22px;font-family:'Playfair Display',serif;font-style:italic;font-size:22px;color:var(--vermelho)}
+
+  /* PREÇO */
+  .preco{background:#fff;border:2px solid var(--ouro);border-radius:24px;padding:28px 22px;margin-top:20px;box-shadow:0 20px 40px -28px rgba(29,21,23,.35)}
+  .inclui{list-style:none;margin-bottom:22px}
+  .inclui li{position:relative;padding:8px 0 8px 30px;font-size:16px;border-bottom:1px solid var(--borda)}
+  .inclui li:last-child{border-bottom:0}
+  .inclui li:before{content:"✓";position:absolute;left:0;top:7px;font-weight:700;color:var(--vermelho)}
+  .bonus{background:var(--creme2);border-radius:14px;padding:14px 16px;margin-bottom:22px;font-size:15px}
+  .bonus b{color:var(--vermelho)}
+  .valor{text-align:center;margin:6px 0 22px}
+  .valor .parc{display:block;font-size:14px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--suave)}
+  .valor b{display:block;font-family:'Playfair Display',serif;font-size:clamp(48px,13vw,62px);line-height:1.1;color:var(--vermelho)}
+  .valor .vista{display:block;font-size:15px;color:var(--texto)}
+  .preco .btn-nota{text-align:center}
+  .preco .btn{padding:18px 16px}
+  .aviso{margin-top:18px;font-size:14.5px;color:var(--suave);background:var(--creme2);border-radius:14px;padding:14px 16px}
+  .link-zap{display:inline-flex;align-items:center;gap:8px;color:var(--vermelho);font-weight:600;font-size:15px;text-decoration:underline;text-underline-offset:3px}
+  .link-zap svg{width:20px;height:20px;flex:none;color:#25a35a}
+  .final .link-zap{color:var(--ouro-claro)}
+
+  /* FAQ */
+  details{border-bottom:1px solid var(--borda);padding:4px 0}
+  summary{list-style:none;cursor:pointer;padding:16px 36px 16px 0;font-weight:600;color:var(--preto);position:relative;font-size:16.5px}
+  summary::-webkit-details-marker{display:none}
+  summary:after{content:"+";position:absolute;right:4px;top:12px;font-size:24px;color:var(--vermelho);font-weight:400}
+  details[open] summary:after{content:"–"}
+  details p{padding:0 0 18px;font-size:16px;color:var(--texto)}
+
+  /* FINAL */
+  .final{background:var(--preto);color:#e9ddd0;text-align:center}
+  .final h2{color:#fff}
+  .final h2 em{color:var(--ouro-claro);font-style:italic}
+  .final .btn-nota{color:#b9a99c}
+  .insta{display:inline-flex;align-items:center;gap:8px;margin-top:26px;color:var(--ouro-claro);text-decoration:none;font-weight:600}
+  .insta svg{width:20px;height:20px}
+  footer{background:#140e10;color:#9c8d86;font-size:13px;padding:28px 0 40px;text-align:center;line-height:1.6}
+  footer a{color:var(--ouro-claro)}
+
+  .barra{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(29,21,23,.96);backdrop-filter:blur(6px);
+    padding:12px 16px calc(12px + env(safe-area-inset-bottom));display:flex;justify-content:center;
+    transform:translateY(110%);transition:transform .3s ease}
+  .barra.on{transform:none}
+  .barra .btn{width:100%;max-width:520px;padding:15px 20px;font-size:15px}
+
+  @media (min-width:640px){
+    .partes{grid-template-columns:1fr 1fr}
+    section{padding:84px 0}
+  }
+  @media (prefers-reduced-motion:reduce){.btn,.barra{transition:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="zap" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.130 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2zm5.8 14.030c-.24.68-1.42 1.31-1.95 1.36-.5.05-.98.23-3.3-.69-2.79-1.1-4.56-3.95-4.7-4.13-.13-.18-1.12-1.49-1.12-2.85 0-1.35.71-2.02.96-2.29.25-.28.55-.35.73-.35l.53.01c.17.01.4-.06.62.48.24.56.8 1.94.87 2.08.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.28.71 1.17 1.53 1.9 1.05.94 1.93 1.23 2.21 1.37.27.14.43.12.59-.07.16-.18.68-.8.86-1.07.18-.28.36-.23.61-.14.25.09 1.6.75 1.87.89.28.14.46.21.53.32.07.12.07.66-.17 1.33z"/></symbol>
+  <symbol id="seta" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12h13M13 6l6 6-6 6"/></symbol>
+  <symbol id="ig" viewBox="0 0 24 24"><path fill="currentColor" d="M12 7.3A4.7 4.7 0 1 0 16.7 12 4.7 4.7 0 0 0 12 7.3zm0 7.75A3.05 3.05 0 1 1 15.05 12 3.05 3.05 0 0 1 12 15.05zM17.95 7.1a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1zM21.9 8.2a5.4 5.4 0 0 0-1.48-3.83A5.45 5.45 0 0 0 16.6 2.9C15.08 2.81 8.92 2.81 7.4 2.9a5.44 5.44 0 0 0-3.83 1.47A5.43 5.43 0 0 0 2.1 8.2c-.09 1.51-.09 7.68 0 9.2a5.4 5.4 0 0 0 1.47 3.82A5.46 5.46 0 0 0 7.4 22.7c1.52.09 7.68.09 9.2 0a5.4 5.4 0 0 0 3.82-1.480 5.45 5.45 0 0 0 1.48-3.82c.09-1.52.09-7.68 0-9.2z"/></symbol>
+  <symbol id="fiss" viewBox="0 0 400 26" fill="none" stroke="#c19a5b" stroke-width="1.6" stroke-linecap="round"><path d="M0 14 L70 12 L96 18 L130 9 L170 15 L205 6 L238 16 L262 11 L300 14 L332 8 L360 15 L400 12"/><path d="M205 6 L214 1"/><path d="M130 9 L124 2"/><path d="M300 14 L308 22"/></symbol>
+</svg>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="marca"><span></span>Farol · um áudio só seu</div>
+    <h1>Você já pensou nisso sozinha mil vezes. <em>Agora me conta.</em></h1>
+    <p class="sub">Você me manda um áudio contando o que está vivendo no seu casamento, faz até <strong>3 perguntas</strong>, e em até <strong>48 horas úteis</strong> recebe um áudio meu, gravado só para a sua situação.</p>
+    <div class="onda" aria-hidden="true" id="onda"></div>
+    <div class="btn-wrap">
+      <a class="btn js-compra" href="#">Quero o meu áudio · R$ 97<svg><use href="#seta"/></svg></a>
+      <span class="btn-nota">Pagamento seguro · PIX ou cartão</span>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Talvez seja o seu caso</div>
+    <h2>Quanto mais você pensa, mais confusa fica?</h2>
+    <ul class="lista-dor">
+      <li>Já conversou com amigas, com a mãe, com a irmã… e cada uma disse uma coisa.</li>
+      <li>Tem vergonha de contar tudo para quem conhece vocês dois.</li>
+      <li>Fica até de madrugada pesquisando “como saber se o casamento acabou”.</li>
+      <li>Não sabe se o que sente é exagero ou se é sério.</li>
+      <li>Ainda não está pronta para uma mentoria, mas não aguenta mais carregar isso sem ninguém.</li>
+    </ul>
+    <p class="fecho">Às vezes você não precisa de mais uma opinião. Precisa de alguém que escute a sua história inteira.</p>
+  </div>
+</section>
+
+<section class="escuro">
+  <div class="wrap">
+    <div class="kicker">O que é o Farol</div>
+    <h2>Uma luz no meio do <em>Limbo</em></h2>
+    <p>O Farol é um primeiro olhar de fora sobre o que você está vivendo. Você fala do seu jeito, sem precisar organizar a história. Eu escuto com atenção, uso o método da mentoria Além do Limbo e te devolvo, em áudio, <strong>o que estou enxergando e qual pode ser o seu próximo passo</strong>.</p>
+    <p>É feita para quem quer clareza agora, no seu tempo, sem precisar marcar horário nem ligar câmera.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">Como funciona</div>
+    <h2>Quatro passos, sem complicação</h2>
+    <ol class="passos">
+      <li><b>Garanta o seu áudio.</b><span>O pagamento é feito no ambiente seguro da Kiwify, por PIX ou cartão.</span></li>
+      <li><b>Responda um formulário rápido.</b><span>Você recebe o link por e-mail logo depois da compra. Leva uns 5 minutos.</span></li>
+      <li><b>Me mande um áudio de até 5 minutos e até 3 perguntas.</b><span>Pelo WhatsApp. Pode falar exatamente do jeito que está na sua cabeça. Você tem até 7 dias depois da compra para enviar.</span></li>
+      <li><b>Receba a minha resposta em até 48 horas úteis.</b><span>Um áudio de 10 a 15 minutos, feito só para você, que pode ouvir quantas vezes quiser.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section style="padding-top:10px">
+  <div class="wrap">
+    <div class="kicker">O que vem no seu áudio</div>
+    <h2>Não é um conselho pronto. É a sua história olhada com cuidado.</h2>
+    <div class="partes">
+      <div class="parte"><i></i><div><b>O que estou escutando</b><span>Eu devolvo a sua história de um jeito que você consiga ver de fora.</span></div></div>
+      <div class="parte"><i></i><div><b>O que pode estar te prendendo</b><span>Filhos, dinheiro, culpa, medo, esperança: o que é trava e o que é escolha.</span></div></div>
+      <div class="parte"><i></i><div><b>Medo ou fato?</b><span>Separamos o que está acontecendo do que você imagina que vai acontecer.</span></div></div>
+      <div class="parte"><i></i><div><b>As suas 3 perguntas</b><span>Respondidas uma a uma, com sinceridade e sem julgamento.</span></div></div>
+      <div class="parte"><i></i><div><b>Um primeiro passo</b><span>Algo concreto para você fazer nos próximos dias, do tamanho do seu momento.</span></div></div>
+      <div class="parte"><i></i><div><b>Para você guardar</b><span>O áudio é seu. Ouça de novo quando a dúvida voltar.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="nao-e">
+  <div class="wrap">
+    <div class="kicker">Para ficar claro</div>
+    <p class="linha">Eu não vou dizer se você deve se separar.</p>
+    <p class="linha">Não é terapia nem atendimento de emergência.</p>
+    <p class="linha">É um primeiro olhar para você sair do lugar.</p>
+    <p class="assinatura">“A decisão é <em>sua</em>.<br>O farol é <em>meu</em>.”</p>
+  </div>
+</section>
+
+<section class="sobre">
+  <div class="wrap">
+    <div class="kicker">Quem vai te escutar</div>
+    <p class="citacao">“Eu já estive nesse lugar e sei o quanto é <em>angustiante</em> não ter com quem falar.”</p>
+    <p>Eu sou a <strong>Débora De Deus</strong>, criadora da mentoria <strong>Além do Limbo</strong>. Acompanho mulheres que não conseguem mais continuar como estão, mas também não conseguem decidir se querem ir embora.</p>
+    <p>Criei o Farol para quem precisa ser ouvida agora, com calma e sem ninguém escolhendo por ela.</p>
+    <p class="assina">Eu acendo o farol. Você escolhe o caminho.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">O investimento</div>
+    <h2>Farol</h2>
+    <div class="preco">
+      <ul class="inclui">
+        <li>Formulário de acolhimento antes do áudio</li>
+        <li>Seu áudio de até 5 minutos + até 3 perguntas</li>
+        <li>Minha resposta em áudio de 10 a 15 minutos, só para você</li>
+        <li>Um primeiro passo concreto para os próximos dias</li>
+        <li>Sigilo total</li>
+      </ul>
+      <div class="bonus"><b>Se quiser continuar:</b> se você entrar na mentoria Além do Limbo em até 15 dias depois de receber o seu áudio, os R$ 97 são descontados do valor da mentoria.</div>
+      <div class="valor">
+        <span class="parc">Valor único</span>
+        <b>R$ 97</b>
+        <span class="vista">no PIX ou no cartão</span>
+      </div>
+      <a class="btn js-compra" href="#" style="width:100%">Quero o meu áudio<svg><use href="#seta"/></svg></a>
+      <span class="btn-nota">Pagamento seguro pela Kiwify · 7 dias para desistir com reembolso, enquanto o áudio não tiver sido enviado</span>
+    </div>
+    <p class="aviso">O Farol não substitui acompanhamento psicológico ou psiquiátrico e não atende situações de violência. Se você corre risco, ligue 180 (Central de Atendimento à Mulher) ou 190.</p>
+    <div class="btn-wrap center">
+      <a class="link-zap js-zap" href="#"><svg><use href="#zap"/></svg>Ainda tenho dúvidas? Fale comigo no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:10px">
+  <div class="wrap">
+    <div class="kicker">Dúvidas frequentes</div>
+    <h2>Talvez você esteja se perguntando…</h2>
+    <details><summary>Preciso saber explicar o que estou sentindo?</summary>
+      <p>Não. Pode falar do jeito que vier, com pausas, choro, voltas. Organizar a história é parte do meu trabalho.</p></details>
+    <details><summary>Alguém além de você vai ouvir o meu áudio?</summary>
+      <p>Não. Só eu escuto, e tudo fica em sigilo.</p></details>
+    <details><summary>Em quanto tempo eu recebo a resposta?</summary>
+      <p>Em até 48 horas úteis depois que você enviar o seu áudio e as perguntas.</p></details>
+    <details><summary>E se eu não conseguir mandar o áudio logo?</summary>
+      <p>Você tem até 7 dias depois da compra para enviar. Se precisar de mais tempo, é só me avisar no WhatsApp.</p></details>
+    <details><summary>Posso mandar mais áudios depois?</summary>
+      <p>O Farol é uma resposta única. Se você quiser continuar, a mentoria Além do Limbo é o caminho, e os R$ 97 são descontados se você entrar em até 15 dias.</p></details>
+    <details><summary>Isso é terapia?</summary>
+      <p>Não. É um primeiro olhar de mentora sobre o seu momento. Se você estiver passando por um momento clínico agudo, o mais indicado é buscar um psicólogo ou psiquiatra.</p></details>
+    <details><summary>E se eu me arrepender da compra?</summary>
+      <p>Você tem 7 dias para desistir e receber o dinheiro de volta, desde que eu ainda não tenha enviado o seu áudio de resposta.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <svg class="fissura" style="margin-bottom:28px"><use href="#fiss"/></svg>
+    <h2>Você não precisa decidir hoje. <em>Só precisa ser ouvida.</em></h2>
+    <p>Me conta o que está acontecendo. Eu te respondo.</p>
+    <div class="btn-wrap">
+      <a class="btn js-compra" href="#">Quero o meu áudio · R$ 97<svg><use href="#seta"/></svg></a>
+      <span class="btn-nota">Resposta em até 48 horas úteis</span>
+    </div>
+    <a class="link-zap js-zap" href="#" style="margin-top:22px"><svg><use href="#zap"/></svg>Ainda tenho dúvidas? Fale comigo no WhatsApp</a><br>
+    <a class="insta" href="https://instagram.com/limbododivorcio" target="_blank" rel="noopener"><svg><use href="#ig"/></svg>@limbododivorcio</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Farol · Além do Limbo com Débora De Deus<br>
+    Se você está em situação de violência, procure ajuda: ligue <a href="tel:180">180</a> (Central de Atendimento à Mulher) ou <a href="tel:190">190</a> em caso de emergência.
+  </div>
+</footer>
+
+<div class="barra" id="barra">
+  <a class="btn js-compra" href="#">Quero o meu áudio · R$ 97<svg><use href="#seta"/></svg></a>
+</div>
+
+<script>
+  var numero = "5561999095856";
+
+  // Cole aqui o link do checkout da Kiwify quando criar o produto (R$ 97).
+  // Enquanto estiver vazio, os botões de compra abrem o WhatsApp.
+  var checkout = "";
+
+  var msgDuvida = "Oi, Débora! Vim pela página do Farol e tenho uma dúvida.";
+  var msgCompra = "Oi, Débora! Quero o meu áudio do Farol (R$ 97).";
+  function zap(m){ return "https://wa.me/" + numero + "?text=" + encodeURIComponent(m); }
+
+  document.querySelectorAll(".js-zap").forEach(function(a){ a.href = zap(msgDuvida); a.target = "_blank"; a.rel = "noopener"; });
+  document.querySelectorAll(".js-compra").forEach(function(a){
+    a.href = checkout || zap(msgCompra);
+    if(!checkout){ a.target = "_blank"; a.rel = "noopener"; }
+  });
+
+  // onda de áudio decorativa
+  var onda = document.getElementById("onda");
+  var alturas = [10,18,26,14,32,22,38,16,28,12,34,24,18,30,14,22,36,20,12,26,16,30,10,20,14];
+  alturas.forEach(function(h){ var i = document.createElement("i"); i.style.height = h + "px"; onda.appendChild(i); });
+
+  var barra = document.getElementById("barra");
+  var hero = document.querySelector(".hero");
+  function checa(){ barra.classList.toggle("on", hero.getBoundingClientRect().bottom < 0); }
+  window.addEventListener("scroll", checa, {passive:true}); checa();
+</script>
+</body>
+</html>
