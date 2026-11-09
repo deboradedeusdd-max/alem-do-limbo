@@ -69,6 +69,8 @@
   .escuro h2 em{color:var(--ouro-claro);font-style:italic}
   .escuro strong{color:#fff}
   .escuro .kicker{color:var(--ouro-claro)}
+  .escuro .destaque{font-family:"Playfair Display",Georgia,serif;font-size:clamp(21px,4.6vw,26px);line-height:1.35;color:#fff;border-left:3px solid var(--ouro);padding-left:18px;margin-top:26px}
+  .escuro .destaque em{color:var(--ouro-claro);font-style:italic}
 
   /* PASSOS */
   .passos{list-style:none;counter-reset:p;margin-top:24px;display:grid;gap:12px}
@@ -106,6 +108,8 @@
   .inclui li:before{content:"✓";position:absolute;left:0;top:7px;font-weight:700;color:var(--vermelho)}
   .bonus{background:var(--creme2);border-radius:14px;padding:14px 16px;margin-bottom:22px;font-size:15px}
   .bonus b{color:var(--vermelho)}
+  .garantia{border:1.5px solid var(--ouro);border-radius:14px;padding:14px 16px;margin-bottom:14px;font-size:15px}
+  .garantia b{color:var(--preto)}
   .valor{text-align:center;margin:6px 0 22px}
   .valor .parc{display:block;font-size:14px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--suave)}
   .valor b{display:block;font-family:'Playfair Display',serif;font-size:clamp(48px,13vw,62px);line-height:1.1;color:var(--vermelho)}
@@ -165,7 +169,7 @@
     <div class="onda" aria-hidden="true" id="onda"></div>
     <div class="btn-wrap">
       <a class="btn js-compra" href="#">Quero o meu áudio · R$ 97<svg><use href="#seta"/></svg></a>
-      <span class="btn-nota">Pagamento seguro · PIX ou cartão</span>
+      <span class="btn-nota">Pagamento seguro · PIX ou cartão · Garantia de 7 dias</span>
     </div>
   </div>
 </header>
@@ -191,6 +195,7 @@
     <h2>Uma luz no meio do <em>Limbo</em></h2>
     <p>O Farol é um primeiro olhar de fora sobre o que você está vivendo. Você fala do seu jeito, sem precisar organizar a história. Eu escuto com atenção, uso o método da mentoria Além do Limbo e te devolvo, em áudio, <strong>o que estou enxergando e qual pode ser o seu próximo passo</strong>.</p>
     <p>É feita para quem quer clareza agora, no seu tempo, sem precisar marcar horário nem ligar câmera.</p>
+    <p class="destaque">Não é um áudio gravado para muitas mulheres. <em>É a minha resposta para a sua história.</em></p>
   </div>
 </section>
 
@@ -254,6 +259,7 @@
         <li>Um primeiro passo concreto para os próximos dias</li>
         <li>Sigilo total</li>
       </ul>
+      <div class="garantia"><b>Garantia de 7 dias.</b> Se você mudar de ideia, devolvo o seu dinheiro, sem perguntas, desde que eu ainda não tenha enviado o seu áudio de resposta.</div>
       <div class="bonus"><b>Se quiser continuar:</b> se você entrar na mentoria Além do Limbo em até 15 dias depois de receber o seu áudio, os R$ 97 são descontados do valor da mentoria.</div>
       <div class="valor">
         <span class="parc">Valor único</span>
@@ -261,7 +267,7 @@
         <span class="vista">no PIX ou no cartão</span>
       </div>
       <a class="btn js-compra" href="#" style="width:100%">Quero o meu áudio<svg><use href="#seta"/></svg></a>
-      <span class="btn-nota">Pagamento seguro pela Kiwify · 7 dias para desistir com reembolso, enquanto o áudio não tiver sido enviado</span>
+      <span class="btn-nota">Pagamento seguro pela Kiwify · Garantia de 7 dias</span>
     </div>
     <p class="aviso">O Farol não substitui acompanhamento psicológico ou psiquiátrico e não atende situações de violência. Se você corre risco, ligue 180 (Central de Atendimento à Mulher) ou 190.</p>
     <div class="btn-wrap center">
@@ -278,6 +284,9 @@
       <p>Não. Pode falar do jeito que vier, com pausas, choro, voltas. Organizar a história é parte do meu trabalho.</p></details>
     <details><summary>Alguém além de você vai ouvir o meu áudio?</summary>
       <p>Não. Só eu escuto, e tudo fica em sigilo.</p></details>
+    <details><summary>E se o meu marido vir?</summary>
+      <p>Tudo acontece só entre nós duas, pelo meu WhatsApp. O e-mail da compra chega com o nome “Farol”, sem palavras como casamento ou divórcio, e a cobrança aparece em nome da Kiwify, a plataforma de pagamento.</p>
+      <p>Se preferir, use um e-mail só seu, me diga o melhor horário para eu mandar a resposta e apague a conversa depois de salvar o áudio. A gente combina do jeito que for mais seguro para você.</p></details>
     <details><summary>Em quanto tempo eu recebo a resposta?</summary>
       <p>Em até 48 horas úteis depois que você enviar o seu áudio e as perguntas.</p></details>
     <details><summary>E se eu não conseguir mandar o áudio logo?</summary>
